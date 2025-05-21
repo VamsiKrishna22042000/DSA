@@ -2,7 +2,7 @@
 using namespace std;
 
 
-
+//brutforce
 int countof(int n){
 
       int count = 0;

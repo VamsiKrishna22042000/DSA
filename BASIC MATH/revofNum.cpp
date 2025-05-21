@@ -1,38 +1,35 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 
-int reverseANum(int n){
-       
-    int revNum = 0;
 
-    while(n>0){
-     
-      int reminder = n % 10;
+int reverse(int n){
+   int revNum = 0;
 
-      revNum = (revNum * 10) + reminder;
+   int ld;
 
+   while(n>0){
+      ld = n%10;
+
+      revNum = (revNum * 10) + ld;
+      
       n = n / 10;
-    }
+   };
 
-
-    return revNum;
-
-  }
-
-
-int main(){
-
-    cout << "Enter a number to reverse :";
-
-    int inputNum;
-
-    cin >> inputNum;
-
-    int finalReversedNumber =  reverseANum(inputNum);
-
-    cout << finalReversedNumber;
    
-    return 0;
+    return revNum;
 }
 
+int main (){
+  cout << "Enter a number to reverse it" << "\n";
+
+  int inputnum;
+
+  cin >> inputnum;
+
+  int finalResult = reverse(inputnum);
+
+  cout << "This is the reversed number" << " " << finalResult;
+
+  return 0;
+}
